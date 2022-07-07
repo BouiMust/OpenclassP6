@@ -35,7 +35,7 @@ const sauceRoutes = require('./routes/sauce');
 
 // Utilisation des routes
 app.use('/api/auth', userRoutes);
-app.use('/api/stuff', sauceRoutes);
+app.use('/api/sauces', sauceRoutes);
 
 
 /*************************************************** */

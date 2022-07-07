@@ -1,21 +1,20 @@
-/*
+
 const express = require('express');
 
-// Routeur Express pour les things
+// Routeur Express pour les sauces
 const router = express.Router();
 
 // Importe les controllers et middlewares pour les appliquer aux routes
-const stuffCtrl = require('../controllers/stuff');
+const sauceCtrl = require('../controllers/sauce');
 const auth = require('../middleware/auth');
 const multer = require('../middleware/multer-config');
 
 // Routes
-router.get('/', auth, stuffCtrl.getAllThing);
-router.get('/:id', auth, stuffCtrl.getOneThing);
-router.post('/', auth, multer, stuffCtrl.createThing)
-router.put('/:id', auth, multer, stuffCtrl.updateThing)
-router.delete('/:id', auth, stuffCtrl.deleteThing)
+router.get('/', auth, sauceCtrl.getAllSauce);
+//router.get('/:id', auth, stuffCtrl.getOneSauce);
+//router.post('/', auth, multer, stuffCtrl.createSauce)
+//router.put('/:id', auth, multer, stuffCtrl.updateSauce)
+//router.delete('/:id', auth, stuffCtrl.deleteSauce)
 
 // Exporte le routeur Express pour l'app
 module.exports = router;
-*/

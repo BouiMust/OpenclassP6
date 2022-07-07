@@ -31,9 +31,11 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Importe les routes
 const userRoutes = require('./routes/user');
+const sauceRoutes = require('./routes/sauce');
 
 // Utilisation des routes
 app.use('/api/auth', userRoutes);
+app.use('/api/stuff', sauceRoutes);
 
 
 /*************************************************** */

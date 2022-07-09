@@ -11,10 +11,10 @@ const multer = require('../middleware/multer-config');
 
 // Routes
 router.get('/', auth, sauceCtrl.getAllSauce);
-//router.get('/:id', auth, stuffCtrl.getOneSauce);
-//router.post('/', auth, multer, stuffCtrl.createSauce)
-//router.put('/:id', auth, multer, stuffCtrl.updateSauce)
-//router.delete('/:id', auth, stuffCtrl.deleteSauce)
+router.get('/:id', auth, sauceCtrl.getOneSauce);
+router.post('/', auth, multer, sauceCtrl.createSauce);
+router.put('/:id', auth, multer, sauceCtrl.updateSauce)
+router.delete('/:id', auth, sauceCtrl.deleteSauce)
 
 // Exporte le routeur Express pour l'app
 module.exports = router;

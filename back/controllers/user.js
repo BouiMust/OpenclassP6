@@ -56,7 +56,7 @@ exports.login = (req, res, next) => {
                     console.log('token : ' + jwt.sign({ userId: user._id }, 'RANDOM_TOKEN_SECRET', { expiresIn: '24h' }));
                     res.status(200).json({
                         userId: user._id,         // on envoie au front(user connecté) le _id de l'user géneré par le back, devient userId
-                        token: jwt.sign(          // et un token chiffré et composé de l'_id de l'user
+                        token: jwt.sign(          // et un token chiffré et composé de l'_id de l'user, se trouvera maintenant dans l'en tete des req de l'user
                             { userId: user._id },
                             'RANDOM_TOKEN_SECRET',
                             { expiresIn: '24h' }

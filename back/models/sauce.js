@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Modèle sauce
 const sauceSchema = mongoose.Schema({
-  userId: { type: String, required: true }, // contiendra le _id de l'user géneré par le back, car seul l'user authentifié pourra créer un thing et il lui sera attribué son id (identifier le proprietaire du thing)
+  userId: { type: String, required: true }, // contiendra le _id de l'user géneré par le back, car seul l'user authentifié pourra créer une sauce et il lui sera attribué son id (identifier le proprietaire de la sauce)
   name: { type: String, required: true },
   manufacturer: { type: String, required: true },
   description: { type: String, required: true },
@@ -11,10 +11,10 @@ const sauceSchema = mongoose.Schema({
   heat: { type: Number, required: true },
   likes: { type: Number},
   dislikes: { type: Number},
-  usersLiked: { type: String}, // array userId des users qui ont likes
-  usersDisliked: { type: String} // array userId des users qui ont dislikes
-  //_id: géneré par le back et attribué au thing, unique
+  usersLiked: { type: [String]},    // array userId des users qui ont likes
+  usersDisliked: { type: [String]}  // array userId des users qui ont dislikes
+  //_id: géneré par le back et attribué à la sauce, unique
 });
 
-// Exporte en tant que 'Thing' dans les autres fichiers
+// Exporte en tant que 'Sauce' dans les autres fichiers
 module.exports = mongoose.model('Sauce', sauceSchema);

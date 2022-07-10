@@ -11,8 +11,8 @@ const sauceSchema = mongoose.Schema({
   heat: { type: Number, required: true },
   likes: { type: Number},
   dislikes: { type: Number},
-  usersLiked: { type: [String]},    // array userId des users qui ont likes
-  usersDisliked: { type: [String]}  // array userId des users qui ont dislikes
+  usersLiked: { type: [String]},    // array avec la liste des userId des users qui ont likes
+  usersDisliked: { type: [String]}
   //_id: géneré par le back et attribué à la sauce, unique
 });
 

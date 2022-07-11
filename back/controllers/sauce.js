@@ -52,7 +52,7 @@ exports.updateSauce = (req, res, next) => {
                     .then(() => res.status(200).json({ message: 'Sauce modifiée' }))
                     .catch(error => res.status(500).json({ error }));
             } else {
-                return res.status(401).json({ message: 'Non autorisé' });
+                return res.status(403).json({ message: 'Non autorisé' });
             }
         })
         .catch(error => res.status(500).json({ error }));
@@ -62,7 +62,7 @@ exports.updateSauce = (req, res, next) => {
 // Like/Dislike une sauce
 exports.likeSauce = (req, res, next) => {
     if (req.auth.userId !== req.body.userId) {
-        return res.status(401).json({ message: 'Non autorisé' });
+        return res.status(403).json({ message: 'Non autorisé' });
     }
     Sauce.findOne({ _id: req.params.id })
         .then((sauce) => {
@@ -115,7 +115,7 @@ exports.deleteSauce = (req, res, next) => {
                         .catch(error => res.status(500).json({ error }));
                 });
             } else {
-                return res.status(401).json({ message: 'Non autorisé' });
+                return res.status(403).json({ message: 'Non autorisé' });
             }
         })
         .catch(error => res.status(500).json({ error }));

@@ -1,6 +1,8 @@
+// Express
 const express = require('express');
 const app = express();
 
+// Json
 app.use(express.json());
 
 // CORS
@@ -24,9 +26,9 @@ mongoose.connect('mongodb+srv://bouimust:%3FNHY654321qsd@cluster0.ilyuvmz.mongod
 
 /*************************************************** */
 
-// Acceder au chemin du serveur
+// Accède au chemin du serveur
 const path = require('path');
-// gére la ressource images de manière statique à chaque fois qu'elle reçoit une requête vers la route /images
+// Gère la ressource image de manière statique à chaque fois qu'elle reçoit une requête vers la route /images
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Importe les routes
@@ -40,4 +42,5 @@ app.use('/api/sauces', sauceRoutes);
 
 /*************************************************** */
 
+// Exporte l'app pour le serveur
 module.exports = app;

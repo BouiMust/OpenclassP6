@@ -1,11 +1,14 @@
+// Mongoose
 const mongoose = require('mongoose');
+
+// Mongoose unique validator
 const uniqueValidator = require('mongoose-unique-validator');
 
 // Modèle user
 const userSchema = mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    //_id: géneré par le back et attribué au user au signup, devient ensuite l'userId
+    //_id: il sera géneré par le back et attribué au user à l'inscription (signup), deviendra ensuite l'userId à l'authentification (login)
 });
 
 // Applique l'email unique

@@ -38,7 +38,7 @@ exports.createSauce = (req, res, next) => {
 };
 
 
-// Modifier une sauce de la BDD
+// Modifie une sauce de la BDD
 exports.updateSauce = (req, res, next) => {
     const sauceObject = req.file ? {
         ...JSON.parse(req.body.sauce),
@@ -103,7 +103,7 @@ exports.likeSauce = (req, res, next) => {
 // file systeme, pour avoir accès au système de fichiers
 const fs = require('fs');
 
-// Supprimer une sauce de la BDD
+// Supprime une sauce de la BDD
 exports.deleteSauce = (req, res, next) => {
     Sauce.findOne({ _id: req.params.id })
         .then((sauce) => {

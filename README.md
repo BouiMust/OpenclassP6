@@ -64,7 +64,7 @@ _________________________________
 
 ### BASE DE DONNEES
 
-L'application utilise le service MongoDB Atlas, une plateforme/service en ligne, pour la sauvegarde des données.
+L'application utilise MongoDB Atlas, une plateforme/service en ligne, pour la sauvegarde des données.
 MongoDB est un système de base de données pour les serveurs Node.
 
 _________________________________
@@ -89,9 +89,9 @@ _________________________________
 ### ENDPOINTS DES ROUTES
 
 
-##### Nom de domaine : http://localhost:4200
+#### Nom de domaine : http://localhost:4200
 
-##### URI pour chaque route
+#### URI pour chaque route
 
 Inscription de l'utilisateur :  
 /api/auth/signup
@@ -123,22 +123,22 @@ Modifier un like/dislike :
 _________________________________
 
 
-### COMPOSITION DU DOSSIER BACK (=BACKEND) :
+### COMPOSITION DU DOSSIER BACK :
 
-Server.js
+#### Server.js
 - il s'agit du serveur Node configuré et normalisé.
 
-App.js
+#### App.js
 - c'est l'application (ou API) que le serveur va servir. A chaque appel du serveur, celui-ci va executer l'application. Ce fichier est la base de l'application.
 
-Dossier routes
+#### Dossier routes
 - contient les routes pour l'application
 
-Dossier models
+#### Dossier models
 - contient les modèles crées avec mongoose
 
-Dossier controllers
+#### Dossier controllers
 - contient les traitements/opérations pour chaque route
 
-Dossier middleware
+#### Dossier middleware
 - contient des traitements complémentaires

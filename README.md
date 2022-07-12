@@ -2,7 +2,7 @@
 
 _________________________________
 
-## OBJECTIF DU PROJET  
+### OBJECTIF DU PROJET  
 
 Créer le backend qui accompagnera le frontend pour faire fonctionner l'application web.
 
@@ -14,18 +14,18 @@ Créer le backend signifie :
 
 _________________________________
 
-## INSTALLATION DE L'APPLICATION
+### INSTALLATION DE L'APPLICATION
 
 Pour lancer l'application web, il faut installer NodeJS et son gestionnaire de paquets npm (livré avec NodeJS par défaut).  
 Lien de téléchargement : https://nodejs.org/en/ (version LTS)
 
-## EXECUTION
+### EXECUTION
 
 - Cloner le dépot avec la commande 'git clone https://github.com/BouiMust/OpenclassP6.git Projet6'
 - Dans le dossier front, lancer la commande 'npm install' pour installer les dépendances dont a besoin le frontend, puis 'npm run start' pour executer le frontend (aller sur http://localhost:4200)
 - Dans le dossier back, taper la commande 'npm init', mettre 'server.js' en point d'entrée. Puis la commande 'node server' pour executer le backend/serveur.
 
-## EXECUTION (AVEC NODEMON)
+### EXECUTION (AVEC NODEMON)
 
 Le paquet Nodemon n'est pas indispensable mais permet de relancer le serveur automatiquement après chaque modification apporté au backend et voir le changement.
 - Installation : 'npm install -g nodemon'
@@ -33,49 +33,49 @@ Le paquet Nodemon n'est pas indispensable mais permet de relancer le serveur aut
 
 _____________________________
 
-## DEPENDANCES LIEES AU BACKEND
+### DEPENDANCES LIEES AU BACKEND
 
 
-### EXPRESS.js  
+##### EXPRESS.js  
 Ce paquet permet de faciliter la création et la gestion de serveur Node et d'API.
 - Installation : 'npm install express --save'
 
-### MONGOOSE  
+##### MONGOOSE  
 Il facilite la gestion et la communication avec la base de données MongoDB.
 - Installation : 'npm install mongoose'
 
-### BCRYPT  
+##### BCRYPT  
 Ce paquet permet de hasher (ou chiffrer) les mots de passe.
 - installation : 'npm install bcrypt'
 
-### Mongoose-unique-validator  
+##### Mongoose-unique-validator  
 Il vérifie qu'une donnée est unique pour chaque ressource d'une collection dans la base de donnée.
 - installation : 'npm install mongoose-unique-validator'
 
-### JSONWEBTOKEN  
+##### JSONWEBTOKEN  
 Il permet de créer et vérifier des tokens (chaines de caractères encodées).
 - installation : 'npm install jsonwebtoken'
 
-### MULTER  
+##### MULTER  
 Le paquet Multer gère les fichiers entrants.
 - installation : 'npm install multer'
 
 _________________________________
 
-## BASE DE DONNEES
+### BASE DE DONNEES
 
 L'application utilise le service MongoDB Atlas, une plateforme/service en ligne, pour la sauvegarde des données.
 MongoDB est un système de base de données pour les serveurs Node.
 
 _________________________________
 
-# REQUETES HTTP
+### REQUETES HTTP
 
 Les verbes (ou actions) http implémentés dans l'application : GET, POST, PUT, DELETE
 
 _________________________________
 
-# CODES HTTP
+### CODES HTTP
 
 Les codes d'état retournés par l'application suite aux requêtes http :
 - 200 : OK, la ressource est disponible
@@ -86,35 +86,35 @@ Les codes d'état retournés par l'application suite aux requêtes http :
 
 _________________________________
 
-# ENDPOINTS DES ROUTES
+### ENDPOINTS DES ROUTES
 
 
-Nom de domaine : http://localhost:4200
+##### Nom de domaine : http://localhost:4200
 
-## URI pour chaque route
+##### URI pour chaque route
 
-Inscription de l'utilisateur :
+Inscription de l'utilisateur :  
 /api/auth/signup
 
-Athentification de l'utilisateur :
+Athentification de l'utilisateur :  
 /api/auth/login
 
-Afficher la collection des sauces :
+Afficher la collection des sauces :  
 /api/sauces
 
-Afficher une sauce :
+Afficher une sauce :  
 /api/sauces/:id
 
-Créer une sauce :
+Créer une sauce :  
 /api/sauces
 
-Modifier une sauce :
+Modifier une sauce :  
 /api/sauces/:id
 
-Supprimer une sauce :
+Supprimer une sauce :  
 /api/sauces/:id
 
-Modifier un like/dislike :
+Modifier un like/dislike :  
 /api/sauces/:id/like
 
 
@@ -123,7 +123,7 @@ Modifier un like/dislike :
 _________________________________
 
 
-# COMPOSITION DU DOSSIER BACK (=BACKEND) :
+### COMPOSITION DU DOSSIER BACK (=BACKEND) :
 
 Server.js
 - il s'agit du serveur Node configuré et normalisé.

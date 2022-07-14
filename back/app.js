@@ -13,6 +13,10 @@ app.use((req, res, next) => {
     next();
 });
 
+// Helmet
+const helmet = require('helmet');
+app.use(helmet());
+
 // Mongoose
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://bouimust:%3FNHY654321qsd@cluster0.ilyuvmz.mongodb.net/?retryWrites=true&w=majority',

@@ -60,11 +60,15 @@ Il permet de créer et vérifier des tokens (chaines de caractères encodées).
 Le paquet Multer gère les fichiers entrants.
 - installation : 'npm install multer'
 
+##### HELMET
+Il augmente la sécurité de l'API en traitant les en-têtes de réponse aux requêtes http.
+- installation : 'npm install helmet --save'
+
 _________________________________
 
 ### BASE DE DONNEES
 
-L'application utilise MongoDB Atlas, une plateforme/service en ligne, pour la sauvegarde des données.
+L'application utilise MongoDB Atlas, une plateforme/service en ligne, pour la sauvegarde des données.  
 MongoDB est un système de base de données pour les serveurs Node.
 
 _________________________________
@@ -80,9 +84,9 @@ _________________________________
 Les codes d'état retournés par l'application suite aux requêtes http :
 - 200 : OK, la ressource est disponible
 - 201 : OK, création ou modification d'une ressource
-- 401 : non authentifié pour accéder à la ressource
-- 403 : accès refusé, non autorisé à exploiter la ressource
-- 500 : erreur interne, erreur provenant de l'application
+- 401 : Non authentifié, l'authentification est requise pour exploiter la ressource
+- 403 : Accès refusé, l'utilisateur n'a pas les droits d'exploiter la ressource
+- 500 : Erreur interne, erreur provenant de l'application
 
 _________________________________
 
@@ -132,13 +136,13 @@ _________________________________
 - c'est l'application (ou API) que le serveur va servir. A chaque appel du serveur, celui-ci va executer l'application. Ce fichier est la base de l'application.
 
 #### Dossier routes
-- contient les routes pour l'application
+- contient les routes pour l'application.
 
 #### Dossier models
-- contient les modèles crées avec mongoose
+- contient les modèles crées avec mongoose.
 
 #### Dossier controllers
-- contient les traitements/opérations pour chaque route
+- contient les traitements/opérations pour chaque route.
 
 #### Dossier middleware
-- contient des traitements complémentaires
+- contient des traitements complémentaires.

@@ -22,7 +22,7 @@ Lien de téléchargement : https://nodejs.org/en/ (version LTS)
 ### EXECUTION
 
 - Cloner le dépot avec la commande `git clone https://github.com/BouiMust/OpenclassP6.git`
-- Dans le dossier front, ouvrir un terminal et lancer la commande 'npm install' pour installer les dépendances dont a besoin le frontend, puis 'npm start' pour executer le frontend (aller sur http://localhost:4200)
+- Dans le dossier front, ouvrir un terminal et lancer la commande ``npm install`` pour installer les dépendances dont a besoin le frontend, puis `npm start` pour executer le frontend (aller sur http://localhost:4200)
 - Dans le dossier back, taper la commande 'npm install', puis la commande 'npm run dev' pour executer le backend/serveur.
 
 _____________________________

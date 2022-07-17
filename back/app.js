@@ -15,11 +15,15 @@ app.use((req, res, next) => {
 
 // Helmet
 const helmet = require('helmet');
-app.use(helmet());
+app.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));       
+// Remarque : en mettant 'same-origin' les images ne chargent pas car bloquées par le header CORP.
+// (pourtant c'est la même origin = http://localhost:3000 ?)
+// En mettant 'same-site' ou 'cross-origin', les images s'affichent.
+
 
 // Mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://bouimust:%3FNHY654321qsd@cluster0.ilyuvmz.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -38,6 +42,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 // Importe les routes
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
+const { strictEqual } = require('assert');
 
 // Utilisation des routes
 app.use('/api/auth', userRoutes);

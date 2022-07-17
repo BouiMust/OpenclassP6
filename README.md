@@ -25,28 +25,29 @@ Lien de téléchargement : https://nodejs.org/en/ (version LTS)
 - Mettre le dossier ``env`` (fourni par le propriétaire du github) à la racine du dépot
 - Dans le dossier front, ouvrir un terminal et lancer la commande `npm install` pour installer les dépendances dont a besoin le frontend, puis `npm start` pour executer le frontend (aller sur http://localhost:4200)
 - Dans le dossier back, taper la commande ``npm install``, puis la commande ``npm run dev`` pour executer le backend/serveur.
-
-- Pour arrêter le serveur : ``CTRL+C``
+  
+Pour arrêter le serveur : ``CTRL+C``
 
 _____________________________
 
 ### VARIABLE D'ENVIRONNEMENT
 
-L'application utilise des variables d'environnement pour le stockage de données sensibles.
-Ces données ne sont pas présentes dans le code de l'application mais sont stockées sur un fichier ``.env``.
-Pour des raisons de sécurité, ce fichier n'est pas joint au dépôt github.
-La commande ``npm run dev`` permet à l'application d'exploiter le fichier ``.env`` dans l'environnement Node.
+L'application utilise des variables d'environnement pour le stockage de données sensibles.  
+Ces données ne sont pas présentes dans le code de l'application mais sont stockées sur un fichier ``.env``.  
+Pour des raisons de sécurité, ce fichier n'est pas joint au dépôt github.  
+  
+La commande ``npm run dev`` permet à l'application d'exploiter le fichier ``.env`` dans l'environnement Node.  
 
 _____________________________
 
 ### DEPENDANCES LIEES AU BACKEND
 
 
-##### EXPRESS.js  
+##### EXPRESS.js 
 Ce paquet permet de faciliter la création et la gestion de serveur Node et d'API.
 <!-- Installation : 'npm install express --save' -->
 
-##### MONGOOSE  
+##### MONGOOSE 
 Il facilite la gestion et la communication avec la base de données MongoDB.
 <!-- Installation : 'npm install mongoose' -->
 

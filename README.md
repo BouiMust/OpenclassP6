@@ -21,9 +21,16 @@ Lien de téléchargement : https://nodejs.org/en/ (version LTS)
 
 ### EXECUTION
 
-- Cloner le dépot avec la commande 'git clone https://github.com/BouiMust/OpenclassP6.git Projet6'
-- Dans le dossier front, lancer la commande 'npm install' pour installer les dépendances dont a besoin le frontend, puis 'npm run start' pour executer le frontend (aller sur http://localhost:4200)
-- Dans le dossier back, taper la commande 'npm init', mettre 'server.js' en point d'entrée. Puis la commande 'node server' pour executer le backend/serveur.
+- Cloner le dépot avec la commande `git clone https://github.com/BouiMust/OpenclassP6.git`
+- Dans le dossier front, ouvrir un terminal et lancer la commande 'npm install' pour installer les dépendances dont a besoin le frontend, puis 'npm start' pour executer le frontend (aller sur http://localhost:4200)
+- Dans le dossier back, taper la commande 'npm install', puis la commande 'npm run dev' pour executer le backend/serveur.
+
+_____________________________
+
+### VARIABLE D'ENVIRONNEMENT
+
+L'application utilise
+La commande npm run dev
 
 ### EXECUTION (AVEC NODEMON)
 
@@ -64,6 +71,9 @@ Le paquet Multer gère les fichiers entrants.
 Il augmente la sécurité de l'API en traitant les en-têtes de réponse aux requêtes http.
 - installation : 'npm install helmet --save'
 
+##### ENV-CMD
+Il permet à travailler avec des variables d'environnement.
+- installation : 'npm install env-cmd --save-dev'
 _________________________________
 
 ### BASE DE DONNEES

@@ -72,11 +72,11 @@ exports.likeSauce = (req, res, next) => {
                 usersLiked: sauce.usersLiked,
                 usersDisliked: sauce.usersDisliked
             }
-            if (likeObject.usersLiked.indexOf(req.auth.userId) >= 0) {
+            if (likeObject.usersLiked.includes(req.auth.userId)) {
                 likeObject.likes -= 1;
                 likeObject.usersLiked.splice(likeObject.usersLiked.indexOf(req.auth.userId), 1);
             }
-            if (likeObject.usersDisliked.indexOf(req.auth.userId) >= 0) {
+            if (likeObject.usersDisliked.includes(req.auth.userId)) {
                 likeObject.dislikes -= 1;
                 likeObject.usersDisliked.splice(likeObject.usersLiked.indexOf(req.auth.userId), 1);
             }

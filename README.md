@@ -22,21 +22,20 @@ Lien de téléchargement : https://nodejs.org/en/ (version LTS)
 ### EXECUTION
 
 - Cloner le dépot avec la commande `git clone https://github.com/BouiMust/OpenclassP6.git`
-- Dans le dossier front, ouvrir un terminal et lancer la commande ``npm install`` pour installer les dépendances dont a besoin le frontend, puis `npm start` pour executer le frontend (aller sur http://localhost:4200)
-- Dans le dossier back, taper la commande 'npm install', puis la commande 'npm run dev' pour executer le backend/serveur.
+- Mettre le dossier ``env`` (fourni par le propriétaire du github) à la racine du dépot
+- Dans le dossier front, ouvrir un terminal et lancer la commande `npm install` pour installer les dépendances dont a besoin le frontend, puis `npm start` pour executer le frontend (aller sur http://localhost:4200)
+- Dans le dossier back, taper la commande ``npm install``, puis la commande ``npm run dev`` pour executer le backend/serveur.
+
+- Pour arrêter le serveur : ``CTRL+C``
 
 _____________________________
 
 ### VARIABLE D'ENVIRONNEMENT
 
-L'application utilise
-La commande npm run dev
-
-### EXECUTION (AVEC NODEMON)
-
-Le paquet Nodemon n'est pas indispensable mais permet de relancer le serveur automatiquement après chaque modification apporté au backend et voir le changement.
-- Installation : 'npm install -g nodemon'
-- Lancer le serveur : 'nodemon server' au lieu de 'node server'
+L'application utilise des variables d'environnement pour le stockage de données sensibles.
+Ces données ne sont pas présentes dans le code de l'application mais sont stockées sur un fichier ``.env``.
+Pour des raisons de sécurité, ce fichier n'est pas joint au dépôt github.
+La commande ``npm run dev`` permet à l'application d'exploiter le fichier ``.env`` dans l'environnement Node.
 
 _____________________________
 
@@ -45,35 +44,35 @@ _____________________________
 
 ##### EXPRESS.js  
 Ce paquet permet de faciliter la création et la gestion de serveur Node et d'API.
-- Installation : 'npm install express --save'
+<!-- Installation : 'npm install express --save' -->
 
 ##### MONGOOSE  
 Il facilite la gestion et la communication avec la base de données MongoDB.
-- Installation : 'npm install mongoose'
+<!-- Installation : 'npm install mongoose' -->
 
 ##### BCRYPT  
 Ce paquet permet de hasher (ou chiffrer) les mots de passe.
-- installation : 'npm install bcrypt'
+<!-- installation : 'npm install bcrypt' -->
 
 ##### Mongoose-unique-validator  
 Il vérifie qu'une donnée est unique pour chaque ressource d'une collection dans la base de donnée.
-- installation : 'npm install mongoose-unique-validator'
+<!-- installation : 'npm install mongoose-unique-validator' -->
 
 ##### JSONWEBTOKEN  
 Il permet de créer et vérifier des tokens (chaines de caractères encodées).
-- installation : 'npm install jsonwebtoken'
+<!-- installation : 'npm install jsonwebtoken' -->
 
 ##### MULTER  
 Le paquet Multer gère les fichiers entrants.
-- installation : 'npm install multer'
+<!-- installation : 'npm install multer' -->
 
 ##### HELMET
-Il augmente la sécurité de l'API en traitant les en-têtes de réponse aux requêtes http.
-- installation : 'npm install helmet --save'
+Il augmente la sécurité de l'API en traitant les en-têtes de requêtes http.
+<!-- installation : 'npm install helmet --save' -->
 
 ##### ENV-CMD
-Il permet à travailler avec des variables d'environnement.
-- installation : 'npm install env-cmd --save-dev'
+Il permet à l'application de travailler avec des variables d'environnement.
+<!-- installation : 'npm install env-cmd --save-dev' -->
 _________________________________
 
 ### BASE DE DONNEES
@@ -156,3 +155,12 @@ _________________________________
 
 #### Dossier middleware
 - contient des traitements complémentaires.
+
+#### Package.json / Package-lock.json
+- contient des détails sur le projet et ses dépendances
+
+#### Dossier Node-modules
+- contient les paquets/modules de bases et ceux qui sont indispensables à l'application (=dépendances) 
+
+#### Dossier Env 
+- contient les variables d'environnement Node

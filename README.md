@@ -73,7 +73,7 @@ Il augmente la sécurité de l'API en traitant les en-têtes de requêtes http.
 
 ##### ENV-CMD
 Il permet à l'application de travailler avec des variables d'environnement.
-<!-- installation : 'npm install env-cmd --save-dev' -->
+<!-- installation : 'npm install env-cmd --save-dev' (ça installe comme dépendance de developpement)-->
 _________________________________
 
 ### BASE DE DONNEES
